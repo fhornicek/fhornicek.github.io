@@ -145,15 +145,15 @@ document.addEventListener("DOMContentLoaded", function () {
   
     if (!top || !bottom) return;
   
-    const isTopVisible = !top.classList.contains('opacity-0');
+    const topVisible = !top.classList.contains('opacity-0');
   
-    // KROK 1: Změníme opacity (to se má animovat)
-    top.classList.toggle('opacity-0');
-    bottom.classList.toggle('opacity-100');
-  
-    // KROK 2: Odložíme pointer-events o jeden frame, aby neblokovaly přechod
-    requestAnimationFrame(() => {
-      top.classList.toggle('pointer-events-none', isTopVisible);
-      bottom.classList.toggle('pointer-events-none', !isTopVisible);
-    });
+    if (topVisible) {
+      // Skryj horní (fade out), zobraz spodní (fade in)
+      top.classList.add('opacity-0');
+      bottom.classList.remove('opacity-0');
+    } else {
+      // Zobraz horní, skryj spodní
+      top.classList.remove('opacity-0');
+      bottom.classList.add('opacity-0');
+    }
   }
