@@ -147,9 +147,13 @@ document.addEventListener("DOMContentLoaded", function () {
   
     const isTopVisible = !top.classList.contains('opacity-0');
   
+    // KROK 1: Změníme opacity (to se má animovat)
     top.classList.toggle('opacity-0');
-    top.classList.toggle('pointer-events-none');
-  
     bottom.classList.toggle('opacity-100');
-    bottom.classList.toggle('pointer-events-none');
+  
+    // KROK 2: Odložíme pointer-events o jeden frame, aby neblokovaly přechod
+    requestAnimationFrame(() => {
+      top.classList.toggle('pointer-events-none', isTopVisible);
+      bottom.classList.toggle('pointer-events-none', !isTopVisible);
+    });
   }
