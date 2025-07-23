@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function toggleMobile(wrapper) {
-    if (window.innerWidth >= 768) return; // funguje jen na mobilech (pod 768px)
+    if (window.innerWidth >= 768) return; // funguje jen na mobilech
 
     const top = wrapper.querySelector('.top-layer');
     const bottom = wrapper.querySelector('.bottom-layer');
