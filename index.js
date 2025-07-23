@@ -139,14 +139,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleMobile(wrapper) {
     if (window.innerWidth >= 768) return;
-  
+
     const top = wrapper.querySelector('.top-layer');
     const bottom = wrapper.querySelector('.bottom-layer');
-  
+
     if (!top || !bottom) return;
-  
+
     const topVisible = !top.classList.contains('opacity-0');
-  
+
     if (topVisible) {
       top.classList.add('opacity-0');
       bottom.classList.remove('opacity-0');
