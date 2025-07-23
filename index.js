@@ -148,11 +148,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const topVisible = !top.classList.contains('opacity-0');
   
     if (topVisible) {
-      // Skryj horní (fade out), zobraz spodní (fade in)
       top.classList.add('opacity-0');
       bottom.classList.remove('opacity-0');
     } else {
-      // Zobraz horní, skryj spodní
       top.classList.remove('opacity-0');
       bottom.classList.add('opacity-0');
     }
