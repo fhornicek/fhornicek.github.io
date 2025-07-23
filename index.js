@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function toggleMobile(wrapper) {
+    console.log('kliknuto'); // pro kontrolu že funkce běží
     if (window.innerWidth >= 768) return; // funguje jen na mobilech
 
     const top = wrapper.querySelector('.top-layer');
