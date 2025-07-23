@@ -151,18 +151,24 @@ document.addEventListener("DOMContentLoaded", function () {
     top.classList.toggle('opacity-0');
     bottom.classList.toggle('opacity-100');
   
-    // Přepni pointer-events, aby se skrytá vrstva nedala kliknout
+    // Přepni pointer-events, aby nebyla aktivní skrytá vrstva
     top.classList.toggle('pointer-events-none');
     bottom.classList.toggle('pointer-events-none');
   
-    // Přepni z-index po přechodu (lepší vizuál)
+    // Z-index změníme AŽ PO animaci opacity
     setTimeout(() => {
       if (isTopVisible) {
-        top.classList.replace('z-10', 'z-0');
-        bottom.classList.replace('z-0', 'z-10');
+        // top mizí, posuneme ho dozadu
+        top.classList.remove('z-10');
+        top.classList.add('z-0');
+        bottom.classList.remove('z-0');
+        bottom.classList.add('z-10');
       } else {
-        top.classList.replace('z-0', 'z-10');
-        bottom.classList.replace('z-10', 'z-0');
+        // bottom mizí, posuneme ho dozadu
+        top.classList.remove('z-0');
+        top.classList.add('z-10');
+        bottom.classList.remove('z-10');
+        bottom.classList.add('z-0');
       }
-    }, 300); // délka přechodu
+    }, 10); // 👈 klíčový moment: minimální delay (10–20ms)
   }
