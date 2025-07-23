@@ -138,17 +138,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function toggleMobile(wrapper) {
-    console.log('kliknuto'); // pro kontrolu že funkce běží
-    if (window.innerWidth >= 768) return; // funguje jen na mobilech
-
+    if (window.innerWidth >= 768) return;
+  
     const top = wrapper.querySelector('.top-layer');
     const bottom = wrapper.querySelector('.bottom-layer');
-
+  
+    if (!top || !bottom) return;
+  
+    const isTopVisible = !top.classList.contains('opacity-0');
+  
+    // Přepni opacity
     top.classList.toggle('opacity-0');
-    top.classList.toggle('z-0');
-    top.classList.toggle('z-10');
-
     bottom.classList.toggle('opacity-100');
-    bottom.classList.toggle('z-10');
-    bottom.classList.toggle('z-0');
+  
+    // Přepni pointer-events, aby se skrytá vrstva nedala kliknout
+    top.classList.toggle('pointer-events-none');
+    bottom.classList.toggle('pointer-events-none');
+  
+    // Přepni z-index po přechodu (lepší vizuál)
+    setTimeout(() => {
+      if (isTopVisible) {
+        top.classList.replace('z-10', 'z-0');
+        bottom.classList.replace('z-0', 'z-10');
+      } else {
+        top.classList.replace('z-0', 'z-10');
+        bottom.classList.replace('z-10', 'z-0');
+      }
+    }, 300); // délka přechodu
   }
