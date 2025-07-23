@@ -136,3 +136,18 @@ document.addEventListener("DOMContentLoaded", function () {
       status.textContent = `Chyba při odesílání: ${error.message}`;
     }
   });
+
+  function toggleMobile(wrapper) {
+    if (window.innerWidth >= 768) return; // funguje jen na mobilech (pod 768px)
+
+    const top = wrapper.querySelector('.top-layer');
+    const bottom = wrapper.querySelector('.bottom-layer');
+
+    top.classList.toggle('opacity-0');
+    top.classList.toggle('z-0');
+    top.classList.toggle('z-10');
+
+    bottom.classList.toggle('opacity-100');
+    bottom.classList.toggle('z-10');
+    bottom.classList.toggle('z-0');
+  }
