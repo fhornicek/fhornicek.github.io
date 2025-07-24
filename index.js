@@ -78,6 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // SWIPER
   const swiper = new Swiper('.mySwiper', {
     loop: true,
+    preloadImages: false,
+    lazy: {
+      loadPrevNext: true,        // Načítá i předchozí a další slide
+      loadPrevNextAmount: 1      // Počet slide navíc (volitelné)
+    },
     spaceBetween: 20,
     slidesPerView: 1,
     pagination: {
