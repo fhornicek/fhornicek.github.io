@@ -137,21 +137,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  function toggleMobile(wrapper) {
-    if (window.innerWidth >= 768) return;
+  function toggleVisibility(container) {
+    const front = container.querySelector('.front-layer');
+    const back = container.querySelector('.back-layer');
 
-    const top = wrapper.querySelector('.top-layer');
-    const bottom = wrapper.querySelector('.bottom-layer');
+    // Pokud je již otevřené, zavři
+    const isVisible = back.classList.contains('opacity-100');
 
-    if (!top || !bottom) return;
-
-    const topVisible = !top.classList.contains('opacity-0');
-
-    if (topVisible) {
-      top.classList.add('opacity-0');
-      bottom.classList.remove('opacity-0');
+    if (isVisible) {
+      front.classList.remove('opacity-0');
+      front.classList.add('opacity-100');
+      back.classList.remove('opacity-100');
+      back.classList.add('opacity-0');
     } else {
-      top.classList.remove('opacity-0');
-      bottom.classList.add('opacity-0');
+      front.classList.remove('opacity-100');
+      front.classList.add('opacity-0');
+      back.classList.remove('opacity-0');
+      back.classList.add('opacity-100');
     }
   }
+
+
+  const icon = document.getElementById('hand-icon');
+if (window.innerWidth < 640) {
+  icon.classList.add('animate-click');
+} else {
+  icon.classList.add('animate-moveRight');
+}

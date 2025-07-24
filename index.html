@@ -188,7 +188,7 @@
       </div>
       <!-- RUKA !-->
       <svg id="hand-icon"
-        class="absolute fill-white opacity-50 -ml-10 mt-4  w-[35px] h-[35px] fill-[#8e8e8e] z-20 animate-moveRight"
+        class="absolute fill-white opacity-50 -ml-10 mt-4  w-[35px] h-[35px] fill-[#8e8e8e] z-20"
         viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
         <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
         <path
@@ -197,11 +197,11 @@
       </svg>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- 1 -->
-        <div class="group relative w-full h-[250px] rounded-3xl overflow-hidden" onclick="toggleMobile(this)">
+        <div onclick="toggleVisibility(this)" class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
           <!-- Horní vrstva -->
           <div
-            class="top-layer absolute inset-0 z-10 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center
-                   transition-opacity duration-700 ease-in-out opacity-100 group-hover:opacity-0">
+            class="front-layer absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center
+                   transition-opacity duration-700 ease-in-out opacity-100 group-hover:opacity-0 z-10">
             <svg class="w-24 md:w-[100px] h-24 md:h-[100px] mb-4" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -218,8 +218,8 @@
         
           <!-- Spodní vrstva -->
           <div
-            class="bottom-layer absolute inset-0 z-0 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-3xl p-5 flex flex-col items-center justify-center
-                   transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+            class="back-layer absolute inset-0 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-3xl p-5 flex flex-col items-center justify-center
+                   transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100 z-0">
             <p class="text-sm md:text-base text-center text-white px-4">
               Navrhnu a vytvořím webové stránky přesně podle Vašich představ – rychlé, bezpečné a přizpůsobené na míru. Nepoužívám žádné šablony, kóduji od základu.
             </p>
@@ -227,9 +227,9 @@
         </div>
 
         <!-- 2 -->
-        <div class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
+        <div onclick="toggleVisibility(this)" class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
           <div
-            class="absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center opacity-100 transition-opacity duration-700 group-hover:opacity-0 z-10">
+            class="front-layer absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center opacity-100 transition-opacity duration-700 group-hover:opacity-0 z-10">
             <svg class="md:w-[100px] h-24 md:h-[100px] mb-2 translate-x-1" viewBox="0 0 640 512"
               xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -245,7 +245,7 @@
             <p>Od 5 000 Kč</p>
           </div>
           <div
-            class="absolute inset-0 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-3xl p-5 flex flex-col items-center justify-center opacity-0 transition-opacity duration-700 group-hover:opacity-100 z-0">
+            class="back-layer absolute inset-0 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-3xl p-5 flex flex-col items-center justify-center opacity-0 transition-opacity duration-700 group-hover:opacity-100 z-0">
             <p class="text-sm md:text-base text-center text-white px-4">
               Vytvořím webové stránky ve WordPressu s přehledným administračním rozhraním, které Vám umožní pohodlně
               spravovat obsah i bez technických znalostí.
@@ -253,9 +253,9 @@
           </div>
         </div>
         <!-- 3 -->
-        <div class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
+        <div onclick="toggleVisibility(this)" class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
           <div
-            class="absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center opacity-100 transition-opacity duration-700 group-hover:opacity-0 z-10">
+            class="front-layer absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center opacity-100 transition-opacity duration-700 group-hover:opacity-0 z-10">
             <svg class="w-24 md:w-[100px] h-24 md:h-[100px] mb-4" viewBox="0 0 640 512"
               xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -271,7 +271,7 @@
             <p>Od 1 000Kč / měsíc</p>
           </div>
           <div
-            class="absolute inset-0 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-3xl p-5 flex flex-col items-center justify-center opacity-0 transition-opacity duration-700 group-hover:opacity-100 z-0">
+            class="back-layer absolute inset-0 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-3xl p-5 flex flex-col items-center justify-center opacity-0 transition-opacity duration-700 group-hover:opacity-100 z-0">
             <p class="text-sm md:text-base text-center text-white px-4">
               Nasadím na Váš web chytrého AI chatbota, který zlepší zákaznickou podporu, zodpoví nejčastější dotazy a
               pomůže zvýšit konverze.
@@ -279,9 +279,9 @@
           </div>
         </div>
         <!-- 4 -->
-        <div class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
+        <div onclick="toggleVisibility(this)" class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
           <div
-            class="absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center opacity-100 transition-opacity duration-700 group-hover:opacity-0 z-10">
+            class="front-layer absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center opacity-100 transition-opacity duration-700 group-hover:opacity-0 z-10">
             <svg class="w-24 md:w-[100px] h-24 md:h-[100px] mb-4" viewBox="0 0 640 512"
               xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -297,7 +297,7 @@
             <p>Od 3 000 Kč</p>
           </div>
           <div
-            class="absolute inset-0 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-3xl p-5 flex flex-col items-center justify-center opacity-0 transition-opacity duration-700 group-hover:opacity-100 z-0">
+            class="back-layer absolute inset-0 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-3xl p-5 flex flex-col items-center justify-center opacity-0 transition-opacity duration-700 group-hover:opacity-100 z-0">
             <p class="text-sm md:text-base text-center text-white px-4">
               Navrhnu strukturu i vzhled webu s důrazem na přehlednost, estetiku a funkčnost. Ideální pro nové projekty
               nebo redesign stávajícího webu.

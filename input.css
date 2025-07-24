@@ -40,6 +40,26 @@
     }
   }
 
+  @keyframes click
+  {
+    0% {
+      transform: translateX(50px) scale(1);
+    }
+    30% {
+      transform: translateX(50px) scale(1);
+    }
+    70% {
+      transform: translateX(50px) scale(0.9);
+    }
+    100% {
+      transform: translateX(50px) scale(1);
+    }
+  }
+
+  .animate-click {
+    animation: click 1500ms ease-in-out forwards infinite alternate;
+  }
+
   .animate-moveRight {
     animation: moveRight 1500ms ease-in-out forwards infinite alternate;
   }

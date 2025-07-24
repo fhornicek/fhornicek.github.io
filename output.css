@@ -928,8 +928,26 @@
     transform: translateX(50px);
   }
 }
+@keyframes click
+{
+  0% {
+    transform: translateX(50px) scale(1);
+  }
+  50% {
+    transform: translateX(50px) scale(0.9);
+  }
+  70% {
+    transform: translateX(50px) scale(1);
+  }
+  100% {
+    transform: translateX(50px) scale(0.9);
+  }
+}
 .animate-moveRight {
   animation: moveRight 1500ms ease-in-out forwards infinite alternate;
+}
+.animate-click {
+  animation: click 800ms ease-in-out forwards infinite alternate;
 }
 #menu-btn.open .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(0px, 0px);
