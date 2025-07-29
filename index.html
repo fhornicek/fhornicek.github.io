@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
-    <link rel="icon" href="img/favicon.svg?=v2" type="image/svg+xml">
+<link rel="icon" href="/img/favicon.ico" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
@@ -24,16 +24,16 @@
       <!-- Menu odkazy - na větších obrazovkách vidět -->
       <div class="space-x-4 md:space-x-12 hidden md:flex text-white">
         <a href="#home" class="hover:text-cyan-200 duration-200">
-          <button>Domů</button>
+          <button class="cursor-pointer">Domů</button>
         </a>
         <a href="#about" class="hover:text-cyan-200 duration-200">
-          <button>O mně</button>
+          <button class="cursor-pointer">O mně</button>
         </a>
         <a href="#sluzby" class="hover:text-cyan-200 duration-200">
-          <button>Služby</button>
+          <button class="cursor-pointer">Služby</button>
         </a>
         <a href="#portfolio" class="hover:text-cyan-200 duration-200">
-          <button>Portfolio</button>
+          <button class="cursor-pointer">Portfolio</button>
         </a>
       </div>
 
@@ -58,7 +58,7 @@
           <path
             d="M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
         </svg>
-        <button>776 468 014</button>
+        <button class="cursor-pointer">776 468 014</button>
       </div>
       </a>
 
@@ -108,11 +108,11 @@
       </p>
       <div class="items-center mt-6 flex flex-col md:items-start sm:flex-row gap-4">
         <a href="#kontakt"> <button
-            class="text-lg md:text-2xl px-10 py-3 md:px-8 md:py-4 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-full hover:scale-105 duration-100 ease-in">
+            class="text-lg md:text-2xl px-10 py-3 md:px-8 md:py-4 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-full hover:scale-105 duration-100 ease-in cursor-pointer">
             Kontaktujte mě
           </button></a>
         <a href="#sluzby"><button
-            class="text-lg md:text-2xl px-10 py-3 md:px-8 md:py-4 bg-transparent rounded-full border border-white hover:scale-105 duration-100 ease-in">
+            class="text-lg md:text-2xl px-10 py-3 md:px-8 md:py-4 bg-transparent rounded-full border border-white hover:scale-105 duration-100 ease-in cursor-pointer">
             Služby
           </button></a>
       </div>
@@ -364,7 +364,7 @@
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
           <textarea id="message" name="message" rows="5" required class="w-full bg-white text-black rounded-xl p-2 mt-1"></textarea>
           
-          <button type="submit" class="mt-2 text-xl md:text-lg px-10 py-3 md:px-8 md:py-4 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-full hover:scale-105 duration-100 ease-in">
+          <button type="submit" class="cursor-pointer mt-2 text-xl md:text-lg px-10 py-3 md:px-8 md:py-4 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-full hover:scale-105 duration-100 ease-in">
             Odeslat
           </button>
         
