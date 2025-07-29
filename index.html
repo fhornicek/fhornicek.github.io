@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
-<link rel="icon" href="img/favicon.ico" />
+<link rel="icon" href="favicon.ico" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
@@ -21,7 +21,7 @@
   <nav class="absolute top-0 w-full h-16 z-20 bg-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-full tracking-wide">
 
-      <!-- Menu odkazy - na větších obrazovkách vidět -->
+      <!-- LG -->
       <div class="space-x-4 md:space-x-12 hidden md:flex text-white">
         <a href="#home" class="hover:text-cyan-200 duration-200">
           <button class="cursor-pointer">Domů</button>
@@ -37,8 +37,7 @@
         </a>
       </div>
 
-      <!-- Hamburger tlačítko - viditelné na mobilu -->
-      <!-- Tlačítko menu pro mobily -->
+      <!-- MB -->
       <div class="md:hidden flex items-center">
         <button id="menu-btn"
           class="text-white absolute right-3 focus:outline-none flex flex-col justify-center items-center w-10 h-10">
@@ -50,7 +49,7 @@
         </button>
       </div>
 
-      <!-- Kontakt (pro desktop) -->
+      <!-- LG -->
       <a href="tel:+420776468014">
       <div
         class="hidden md:flex items-center gap-2 fill-white hover:text-cyan-200 hover:fill-cyan-200 duration-200 text-white">
@@ -62,7 +61,7 @@
       </div>
       </a>
 
-      <!-- Mobilní menu (skryté pomocí opacity, ne display) -->
+      <!-- MB -->
       <div id="mobile-menu"
         class="absolute w-3/4 h-[500px] top-16 text-2xl font-semibold right-0 pt-8 md:hidden bg-zinc-800 rounded-xl px-4 pt-2 pb-4 space-y-16 tracking-wide text-white flex flex-col items-center text-center">
         <a href="#home" class="block hover:text-cyan-200 duration-200">
@@ -178,7 +177,6 @@
         </div>
       </div>
     </section>
-    <!-- Dekorace-->
 
     <!-- SLUŽBY -->
     <section id="sluzby" class="max-w-7xl mx-auto px-4 pt-8 sm:px-6 lg:px-8">
