@@ -19,7 +19,7 @@
 
   <!-- NAV -->
   <nav class="absolute top-0 w-full h-16 z-20 bg-transparent">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-full tracking-wide">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-full tracking-wide">
 
       <!-- LG -->
       <div class="space-x-4 md:space-x-12 hidden md:flex text-white">
@@ -97,7 +97,7 @@
     <div class="col-start-1 row-start-1 bg-gradient-to-b from-transparent to-zinc-900 w-full h-full"></div>
 
     <div
-      class="col-start-1 row-start-1 flex flex-col justify-center items-center md:items-start w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      class="col-start-1 row-start-1 flex flex-col justify-center items-center md:items-start container mx-auto px-4 sm:px-6 lg:px-8 z-10">
       <h1 class="text-center text-4xl md:text-6xl md:text-left">
         Web na míru.
       </h1>
@@ -121,14 +121,14 @@
   </section>
   <div class="bg-[linear-gradient(to_bottom,_#18181b_5%,_transparent_95%),url('img/animated-shape.svg')]">
     <!-- O MNĚ -->
-    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center mb-10">
         <div class="w-1.5 h-12 bg-gradient-to-t from-cyan-800 to-sky-400 mr-4"></div>
         <h2 class="font-extrabold text-4xl md:text-6xl">O mně</h2>
       </div>
-      <div class="flex flex-col md:flex-row gap-10 md:gap-10 text-center justify-center">
-        <!-- 1 -->
-        <div class="bg-zinc-800 p-8 py-10 rounded-3xl flex flex-col items-center hover:scale-105 duration-100 ease-in">
+      <div class="flex flex-col md:flex-row gap-10 md:gap-10">
+
+        <div class="bg-zinc-800 p-8 py-10 rounded-3xl flex flex-col items-center hover:scale-105 duration-100 ease-in flex-1 text-center">
           <svg class="w-24 md:w-[150px] h-24 md:h-[150px]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -144,8 +144,8 @@
           </p>
         </div>
 
-        <!-- 2 -->
-        <div class="bg-zinc-800 p-8 py-10 rounded-3xl flex flex-col items-center hover:scale-105 duration-100 ease-in">
+
+        <div class="bg-zinc-800 p-8 py-10 rounded-3xl flex flex-col items-center hover:scale-105 duration-100 ease-in flex-1 text-center">
           <svg class="w-24 md:w-[150px] h-24 md:h-[150px]" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -161,8 +161,8 @@
           </p>
         </div>
 
-        <!-- 3 -->
-        <div class="bg-zinc-800 p-8 py-10 rounded-3xl flex flex-col items-center hover:scale-105 duration-100 ease-in">
+
+        <div class="bg-zinc-800 p-8 py-10 rounded-3xl flex flex-col items-center hover:scale-105 duration-100 ease-in flex-1 text-center">
           <svg class="w-24 md:w-[150px] h-24 md:h-[150px]" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -181,7 +181,7 @@
     </section>
 
     <!-- SLUŽBY -->
-    <section id="sluzby" class="max-w-7xl mx-auto px-4 pt-8 sm:px-6 lg:px-8">
+    <section id="sluzby" class="container mx-auto px-4 pt-8 sm:px-6 lg:px-8">
       <div class="flex items-center mb-10 z-2">
         <div class="w-1.5 h-12 bg-gradient-to-t from-cyan-800 to-sky-400 mr-4"></div>
         <h2 class="font-extrabold text-4xl md:text-6xl">Nabídka služeb</h2>
@@ -195,7 +195,7 @@
         </path>
       </svg>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- 1 -->
+
         <div onclick="toggleVisibility(this)" class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
           <div
             class="front-layer absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center
@@ -222,7 +222,7 @@
           </div>
         </div>
 
-        <!-- 2 -->
+        
         <div onclick="toggleVisibility(this)" class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
           <div
             class="front-layer absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center opacity-100 transition-opacity duration-700 group-hover:opacity-0 z-10">
@@ -248,7 +248,7 @@
             </p>
           </div>
         </div>
-        <!-- 3 -->
+        
         <div onclick="toggleVisibility(this)" class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
           <div
             class="front-layer absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center opacity-100 transition-opacity duration-700 group-hover:opacity-0 z-10">
@@ -274,7 +274,7 @@
             </p>
           </div>
         </div>
-        <!-- 4 -->
+        
         <div onclick="toggleVisibility(this)" class="group relative w-full h-[250px] rounded-3xl overflow-hidden">
           <div
             class="front-layer absolute inset-0 bg-zinc-800 rounded-3xl p-5 flex flex-col items-center justify-center opacity-100 transition-opacity duration-700 group-hover:opacity-0 z-10">
@@ -304,7 +304,7 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section id="portfolio" class="max-w-7xl mx-auto px-4 pt-8 sm:px-6 lg:px-8">
+    <section id="portfolio" class="container mx-auto px-4 pt-8 sm:px-6 lg:px-8">
       <div class="flex items-center mb-10">
         <div class="w-1.5 h-12 bg-gradient-to-t from-cyan-800 to-sky-400 mr-4"></div>
         <h2 class="font-extrabold text-4xl md:text-6xl">Portfolio</h2>
@@ -342,7 +342,7 @@
 
     </section>
     <!--KONTAKT-->
-    <section id="kontakt" class="max-w-7xl mx-auto px-4 pt-8 sm:px-6 lg:px-8">
+    <section id="kontakt" class="container mx-auto px-4 pt-8 sm:px-6 lg:px-8">
       <div class="flex items-center mb-10 z-2">
         <div class="w-1.5 h-12 bg-gradient-to-t from-cyan-800 to-sky-400 mr-4"></div>
         <h2 class="font-extrabold text-4xl md:text-6xl">Kontakt</h2>
@@ -371,7 +371,7 @@
           <p id="status" class="mt-4 text-center text-white"></p>
         </form>
         <div class="h-[40vh] md:h-3/5 grid grid-cols-1 gap-6 text-white text-2xl md:text-3xl my-auto mx-auto">
-          <!-- Řádek 1 -->
+          
           <div class="grid grid-cols-[80px_auto] items-center hover:scale-105 ease-in duration-100">
             <svg class="w-[50px] h-[50px] justify-self-center" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
               <path fill="url(#gradient1)"
@@ -380,7 +380,7 @@
             <p class="font-semibold">Filip Horníček</p>
           </div>
         
-          <!-- Řádek 2 -->
+          
           <div class="grid grid-cols-[80px_auto] items-center hover:scale-105 ease-in duration-100">
             <svg class="w-[50px] h-[50px] justify-self-center" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
               <path fill="url(#gradient1)"
@@ -389,7 +389,7 @@
             <p class="font-semibold">+420 776 468 014</p>
           </div>
         
-          <!-- Řádek 3 -->
+          
           <div class="grid grid-cols-[80px_auto] items-center hover:scale-105 ease-in duration-100">
             <svg class="w-[50px] h-[50px] justify-self-center" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <path fill="url(#gradient1)"
@@ -402,7 +402,7 @@
   </section>
 
   <footer class="mt-20 bg-zinc-800/80 h-24">
-    <div class="flex flex-row items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+    <div class="container mx-auto flex flex-row items-center mx-auto px-4 sm:px-6 lg:px-8 h-full">
       <p class="text-start text-white text-sm md:text-base">
         Made by Filip Horníček | 2025
       </p>
