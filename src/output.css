@@ -20,7 +20,6 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-xs: 20rem;
-    --container-7xl: 80rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -534,17 +533,11 @@
   .bg-\[linear-gradient\(to_bottom\,_\#18181b_5\%\,_transparent_95\%\)\,url\(\'\.\.\/img\/animated-shape\.svg\'\)\] {
     background-image: linear-gradient(to bottom, #18181b 5%, transparent 95%),url('../img/animated-shape.svg');
   }
-  .bg-\[linear-gradient\(to_bottom\,_\#18181b_5\%\,_transparent_95\%\)\,url\(\'img\/animated-shape\.svg\'\)\] {
-    background-image: linear-gradient(to bottom, #18181b 5%, transparent 95%),url('img/animated-shape.svg');
+  .bg-\[url\(\'\.\.\/img\/generated-image\.jpg\'\)\] {
+    background-image: url('../img/generated-image.jpg');
   }
   .bg-\[url\(\'\.\.\/img\/generated-image\.png\'\)\] {
     background-image: url('../img/generated-image.png');
-  }
-  .bg-\[url\(\'\.\/img\/generated-image\.png\'\)\] {
-    background-image: url('./img/generated-image.png');
-  }
-  .bg-\[url\(\'img\/generated-image\.png\'\)\] {
-    background-image: url('img/generated-image.png');
   }
   .from-cyan-800 {
     --tw-gradient-from: var(--color-cyan-800);
@@ -589,9 +582,6 @@
   }
   .bg-center {
     background-position: center;
-  }
-  .fill-\[\#8e8e8e\] {
-    fill: #8e8e8e;
   }
   .fill-white {
     fill: var(--color-white);
