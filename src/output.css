@@ -536,9 +536,6 @@
   .bg-\[url\(\'\.\.\/img\/generated-image\.jpg\'\)\] {
     background-image: url('../img/generated-image.jpg');
   }
-  .bg-\[url\(\'\.\.\/img\/generated-image\.png\'\)\] {
-    background-image: url('../img/generated-image.png');
-  }
   .from-cyan-800 {
     --tw-gradient-from: var(--color-cyan-800);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1069,6 +1066,15 @@
 }
 html {
   scroll-behavior: smooth;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 @property --tw-translate-x {
   syntax: "*";

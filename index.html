@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="title" content="Web na míru Uherské Hradiště | Filip Horníček">
-  <meta name="description" content="Tvorba moderních webových stránek a webdesign na míru pro firmy i jednotlivce v Uherském Hradišti a Zlínském kraji. Profesionální, rychlé a bezpečné weby." />
+  <meta name="description" content="Tvorba moderních webových stránek a webdesign na míru pro firmy i jednotlivce v Uherském Hradišti a Zlínském kraji. Profesionální, rychlé a responzivní weby." />
   <meta name="theme-color" content="#18181b">
   <meta name="robots" content="index, follow">
 
@@ -23,14 +23,24 @@
   <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/08e8df9d-28cf-423e-9ed8-1eaf2e411cf3.png?token=G_JoVKbNQWOUzWI5NwCpmRtkdoHQ32EOtV0x4zHOons&height=555&width=1200&expires=33291687797">
 
   <title>Web na míru Uherské Hradiště | Filip Horníček</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  </noscript>
+
   <link href="/src/output.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+  </noscript>
 <link rel="icon" href="favicon.ico" />
 <link rel="canonical" href="https://filiphornicek.cz" />
+
+
+
  <!-- Google tag (gtag.js) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TFD1GZ400"></script>
  <script>
@@ -41,21 +51,30 @@
    gtag('config', 'G-9TFD1GZ400');
  </script>
    <script type="application/ld+json">
-     {
-       "@context": "https://schema.org",
-       "@type": "ProfessionalService",
-       "name": "Filip Horníček – web na míru",
-       "telephone": "+420776468014",
-       "email": "hornicek.filip@email.cz",
-       "url": "https://filiphornicek.cz",
-       "description": "Tvorba moderních webových stránek pro firmy i jednotlivce v Uherském Hradišti a Zlínském kraji - Filip Horníček",
-       "address": {
-         "addressLocality": "Uherské Hradiště",
-         "addressRegion": "Zlínský kraj",
-         "postalCode": "68601",
-         "addressCountry": "CZ"
-       }
-     }
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Filip Horníček – web na míru",
+      "telephone": "+420776468014",
+      "email": "hornicek.filip@email.cz",
+      "url": "https://filiphornicek.cz",
+      "description": "Tvorba moderních webových stránek pro firmy i jednotlivce v Uherském Hradišti a Zlínském kraji - Filip Horníček",
+      "priceRange": "5000–20000 CZK",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Uherské Hradiště"
+        },
+        {
+          "@type": "City",
+          "name": "Zlín"
+        },
+        {
+          "@type": "State",
+          "name": "Zlínský kraj"
+        }
+      ]
+    }
      </script>
 
 </head>
@@ -171,7 +190,7 @@
         <div class="w-1.5 h-12 bg-gradient-to-t from-cyan-800 to-sky-400 mr-4"></div>
         <h2 class="font-extrabold text-4xl md:text-6xl">O mně</h2>
       </div>
-      <div class="flex flex-col md:flex-row gap-10 md:gap-10">
+      <div class="fade-in flex flex-col md:flex-row gap-10 md:gap-10">
 
         <div class="bg-zinc-800 p-8 py-10 rounded-3xl flex flex-col items-center hover:scale-105 duration-100 ease-in flex-1 text-center">
           <svg class="w-24 md:w-[150px] h-24 md:h-[150px]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
@@ -226,7 +245,7 @@
     </section>
 
     <!-- SLUŽBY -->
-    <section id="sluzby" class="container mx-auto px-4 pt-8 sm:px-6 lg:px-8">
+    <section id="sluzby" class="fade-in container mx-auto px-4 pt-8 sm:px-6 lg:px-8">
       <div class="flex items-center mb-10 z-2">
         <div class="w-1.5 h-12 bg-gradient-to-t from-cyan-800 to-sky-400 mr-4"></div>
         <h2 class="font-extrabold text-4xl md:text-6xl">Nabídka služeb</h2>
@@ -256,7 +275,7 @@
                 d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z" />
             </svg>
             <h3 class="text-xl font-bold text-white">Web na míru</h3>
-            <p class="text-white">Od 10 000 Kč</p>
+            <p class="text-white">Od 5 000 Kč</p>
           </div>
           <div
             class="back-layer absolute inset-0 bg-gradient-to-tr from-cyan-950 to-sky-400 rounded-3xl p-5 flex flex-col items-center justify-center
@@ -349,7 +368,7 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section id="portfolio" class="container mx-auto px-4 pt-8 sm:px-6 lg:px-8">
+    <section id="portfolio" class="fade-in container mx-auto px-4 pt-8 sm:px-6 lg:px-8">
       <div class="flex items-center mb-10">
         <div class="w-1.5 h-12 bg-gradient-to-t from-cyan-800 to-sky-400 mr-4"></div>
         <h2 class="font-extrabold text-4xl md:text-6xl">Portfolio</h2>
@@ -409,7 +428,7 @@
 
     </section>
     <!--KONTAKT-->
-    <section id="kontakt" class="container mx-auto px-4 pt-8 sm:px-6 lg:px-8">
+    <section id="kontakt" class="fade-in container mx-auto px-4 pt-8 sm:px-6 lg:px-8">
       <div class="flex items-center mb-10 z-2">
         <div class="w-1.5 h-12 bg-gradient-to-t from-cyan-800 to-sky-400 mr-4"></div>
         <h2 class="font-extrabold text-4xl md:text-6xl">Kontakt</h2>
