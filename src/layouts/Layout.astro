@@ -13,12 +13,15 @@ const { title } = Astro.props;
     <meta name="description" content="Tvorba webových stránek Uherské Hradiště | Filip Horníček - Web designer a frontend developer. Moderní responzivní weby, redesign, UI/UX design a mobilní aplikace pro firmy a podnikatele v Uherském Hradišti a okolí." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TFD1GZ400"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <script is:inline>
+      const gtmWindow = window;
+      gtmWindow.dataLayer = gtmWindow.dataLayer || [];
 
-      gtag('config', 'G-9TFD1GZ400');
+      function gtag(){gtmWindow.dataLayer.push(arguments);}
+
+      gtmWindow.gtag = gtmWindow.gtag || gtag;
+      gtmWindow.gtag('js', new Date());
+      gtmWindow.gtag('config', 'G-9TFD1GZ400');
     </script>
     <link rel="icon" type="image/png" href="/favicon.png" />
     
@@ -29,7 +32,7 @@ const { title } = Astro.props;
     <link rel="canonical" href="https://filiphornicek.cz" />
     
     <!-- Local Business Schema -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Filip Horníček - Web Designer",
@@ -51,7 +54,7 @@ const { title } = Astro.props;
     })} />
     
     <!-- Person Schema -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Filip Horníček",
