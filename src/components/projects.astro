@@ -1,0 +1,131 @@
+---
+import { Image } from "astro:assets";
+import arssalon from "../../public/arssalon.png";
+import myesgym from "../../public/myes.png";
+import gobeyondteam from "../../public/gbt.png";
+import bohemiabot from "../../public/bohemiabot.png";
+import alonsoa from "../../public/alonsoa.png";
+
+interface Project {
+  title: string;
+  image: ImageMetadata;
+  link: string;
+  preview: string;
+}
+
+const projects: Project[] = [
+  {
+    title: "ARS Salon",
+    image: arssalon as ImageMetadata,
+    preview: "https://arssalon.cz"
+  },
+  {
+    title: "Myes Gym",
+    image: myesgym as ImageMetadata,
+    preview: "https://myes.cz"
+  },
+  {
+    title: "Go Beyond Team",
+    image: gobeyondteam as ImageMetadata,
+    preview: "https://gobeyondteam.cz"
+    },
+  {
+    title: "BohemiaBot",
+    image: bohemiabot as ImageMetadata,
+    preview: "https://www.bohemiabot.cz"
+  },
+    {
+    title: "Alonsoa",
+    image: alonsoa as ImageMetadata,
+    preview: "https://www.alonsoa.cz"
+  },
+];
+---
+
+<section
+  id="projects"
+  class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
+>
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">Moje práce</h2>
+    <h3 class="text-4xl md:text-5xl font-medium mb-8">Projekty</h3>
+
+    <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-hidden">
+      {
+        projects.map((project, index) => (
+          <div class={`group project-item transition-all duration-500 ease-in-out ${index >= 4 ? 'max-h-0 opacity-0 scale-95 pointer-events-none' : 'max-h-[500px] opacity-100 scale-100'}`}>
+            <a
+              href={project.preview}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block"
+            >
+              <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  class=" w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div class="flex items-center px-3">
+                <div class="flex-grow">
+                  <h4 class="text-2xl font-semibold">{project.title}</h4>
+                </div>
+                <div class="flex gap-2 ml-auto">
+                  <a
+                    target="_blank"
+                    href={project.preview}
+                    aria-label="Preview"
+                    class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="size-7"
+                    >
+                      <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+    <button
+      id="show-more-btn"
+      class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[#1414149c] hover:bg-[var(--white-icon-tr)] hover:scale-105"
+    >
+      <span class="md:text-lg text-md">Více projektů</span>
+    </button>
+  </div>
+</section>
+
+<script>
+  const showMoreBtn = document.getElementById('show-more-btn');
+  const projectItems = document.querySelectorAll('.project-item');
+  let showingAll = false;
+
+  showMoreBtn?.addEventListener('click', () => {
+    showingAll = !showingAll;
+    
+    projectItems.forEach((item, index) => {
+      if (index >= 4) {
+        if (showingAll) {
+          item.classList.remove('max-h-0', 'opacity-0', 'scale-95', 'pointer-events-none');
+          item.classList.add('max-h-[500px]', 'opacity-100', 'scale-100');
+        } else {
+          item.classList.remove('max-h-[500px]', 'opacity-100', 'scale-100');
+          item.classList.add('max-h-0', 'opacity-0', 'scale-95', 'pointer-events-none');
+        }
+      }
+    });
+
+    const btnText = showMoreBtn.querySelector('span');
+    if (btnText) {
+      btnText.textContent = showingAll ? 'Méně projektů' : 'Více projektů';
+    }
+  });
+</script>

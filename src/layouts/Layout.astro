@@ -1,0 +1,149 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Tvorba webových stránek Uherské Hradiště | Filip Horníček - Web designer a frontend developer. Moderní responzivní weby, redesign, UI/UX design a mobilní aplikace pro firmy a podnikatele v Uherském Hradišti a okolí." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TFD1GZ400"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9TFD1GZ400');
+    </script>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="tvorba webových stránek Uherské Hradiště, web designer Uherské Hradiště, tvorba webu Uherské Hradiště, frontend developer, responzivní web, redesign webu, UI/UX design, mobilní aplikace, webové stránky pro firmy, Filip Horníček" />
+    <meta name="author" content="Filip Horníček" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://filiphornicek.cz" />
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Filip Horníček - Web Designer",
+      "image": "https://filiphornicek.cz/og.image.png",
+      "description": "Profesionální tvorba webových stránek a aplikací v Uherském Hradišti. Moderní responzivní weby, redesign a UI/UX design.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Uherské Hradiště",
+        "addressCountry": "CZ"
+      },
+      "telephone": "+420776468014",
+      "email": "hornicek.filip@email.cz",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Uherské Hradiště"
+      },
+      "serviceType": ["Tvorba webových stránek", "Web design", "UI/UX Design", "Responzivní weby", "Mobilní aplikace"]
+    })} />
+    
+    <!-- Person Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Filip Horníček",
+      "jobTitle": "Web Designer & Frontend Developer",
+      "telephone": "+420776468014",
+      "email": "hornicek.filip@email.cz",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Uherské Hradiště",
+        "addressCountry": "CZ"
+      },
+      "knowsAbout": ["Web Design", "Frontend Development", "React", "Astro", "TypeScript", "UI/UX Design"]
+    })} />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Filip Horníček - Tvorba webových stránek Uherské Hradiště" />
+    <meta property="og:description" content="Profesionální tvorba webových stránek a aplikací v Uherském Hradišti. Moderní responzivní weby, redesign a UI/UX design pro firmy a podnikatele." />
+    <meta property="og:image" content="https://filiphornicek.cz/og.image.png" />
+    <meta property="og:url" content="https://filiphornicek.cz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Filip Horníček Portfolio" />
+    <meta property="og:locale" content="cs_CZ" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Filip Horníček - Tvorba webových stránek Uherské Hradiště" />
+    <meta name="twitter:description" content="Profesionální tvorba webových stránek a aplikací v Uherském Hradišti." />
+    <meta name="twitter:image" content="https://filiphornicek.cz/og.image.png" />
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="CZ-72" />
+    <meta name="geo.placename" content="Uherské Hradiště" />
+    <meta name="geo.position" content="49.0697;17.4594" />
+    <meta name="ICBM" content="49.0697, 17.4594" />
+
+    <title>{title}</title>
+  </head>
+  <body class="bg-[--background] sm:px-28 lg:px-20 px-9">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import url('https://fonts.cdnfonts.com/css/montserrat');
+
+  :root {
+    --background: #101010;
+    --sec: #3b82f6;
+    --white: #dfdfdf;
+    --white-icon: #f3f3f398;
+    --white-icon-tr: #f3f3f310;
+  }
+
+  * {
+    font-family:
+      "Montserrat",
+      -apple-system,
+      system-ui,
+      sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  *::selection {
+    background-color: var(--sec);
+    color: var(--background);
+  }
+
+  /* Scrollbar styles */
+
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--container);
+    border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--background);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--pink);
+  }
+
+  /* Scrollbar styles for Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line) var(--container);
+  }
+</style>
